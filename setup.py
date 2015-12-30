@@ -15,7 +15,7 @@ setup(
 	name = 'pyramid_favicon',
 
 	# version
-	version = '0.0.1',
+	version = '0.0.2',
 
 	# description
 	description = 'Pyramid add-on for defining relocatable favicon.ico',
@@ -24,6 +24,7 @@ setup(
 
 	#url
 	url='https://www.github.com/niteoweb/pyramid_favicon',
+	download_url='https://pypi.python.org/pypi/pyramid_favicon'
 
 	#author
 	author = 'Niteoweb Ltd',
