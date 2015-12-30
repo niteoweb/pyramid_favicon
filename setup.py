@@ -24,7 +24,7 @@ setup(
 
 	#url
 	url='https://www.github.com/niteoweb/pyramid_favicon',
-	download_url='https://pypi.python.org/pypi/pyramid_favicon'
+	download_url='https://pypi.python.org/pypi/pyramid_favicon',
 
 	#author
 	author = 'Niteoweb Ltd',
