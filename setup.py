@@ -26,10 +26,9 @@ setup(
 	url='https://www.github.com/niteoweb/pyramid_favicon',
 
 	#author
-	author = 'Allan Paolo Barazon / Niteoweb Ltd',
-	author_email = 'titopao@gmail.com',
-
-	license='MIT',
+	author = 'Niteoweb Ltd',
+	
+	license='',
 
 	classifiers = [
 		'Environment :: Web Environment',
