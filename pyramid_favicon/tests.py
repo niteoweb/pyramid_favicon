@@ -12,13 +12,8 @@ class FaviconTests(unittest.TestCase):
     def setUp(self):
         self.config = testing.setUp()
         self.config.include('pyramid_chameleon')
-        from ebn import configure
-
-            # needed because we configure a override bimt's UserEdit view,
-        # but the route is created in pyramid_bimt's __init__.py
-        self.config.add_route('user_edit', '/user/edit/')
-
-        configure(self.config)
+        
+        # configure(self.config)
         app = self.config.make_wsgi_app()
         self.testapp = webtest.TestApp(app)
 
@@ -26,6 +21,12 @@ class FaviconTests(unittest.TestCase):
         testing.tearDown()
 
     def test_favicon(self):
+        from pyramid_favicon import favicon
+        self.config.add_route('favicon', '/favicon.ico')
+
         response = self.testapp.get('/favicon.ico')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content_type, 'image/x-icon')
+
+if __name__=="__main__":
+    unittest.main()
