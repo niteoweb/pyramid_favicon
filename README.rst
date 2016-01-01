@@ -2,6 +2,8 @@
 ===================
 
 ``pyramid_favicon``	is an add-on for handling favicons in your Pyramid project. Normally,
-favicons are located on the root directory of a web site. However, with this add-on,
-it is possible to specify a different location for your favicon via a custom config setting.
+the favicon.ico file is located on the root directory of a web site 
+(e.g. /myproject_root/favicon.ico). However, with this add-on, it is possible to specify
+a different location of favicon.ico via a custom config setting 
+(e.g. /myproject_root/some/other/location/favicon.ico).
 
