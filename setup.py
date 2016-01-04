@@ -28,11 +28,13 @@ setup(
 
     #author
     author = 'Niteoweb Ltd',
+    author_email = 'info@niteoweb.com',
     
-    license='',
+    license='3-clause BSD',
 
     classifiers = [
         'Environment :: Web Environment',
+        'License :: OSI Approved :: BSD License',
         'Programming Language :: Python',
         'Framework :: Pyramid',
         'Topic :: Software Development :: Libraries :: Python Modules',
