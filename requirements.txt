@@ -36,7 +36,7 @@ pyramid-chameleon==0.3
 #venusian==1.0
 #waitress==0.8.10
 #WebOb==1.5.1
-#WebTest==2.0.20
+WebTest==2.0.20
 #wheel==0.24.0
 #whichcraft==0.1.1
 #zope.deprecation==4.1.2
