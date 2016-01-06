@@ -21,6 +21,6 @@ def favicon(request):
     if favicon_path:
         icon = os.path.join(favicon_path, 'favicon.ico')
     else:
-        icon = os.path.join(here, '../', 'static', 'dist', 'favicon.ico')
+        icon = os.path.join(here, '../', 'static', 'favicon.ico')
     
     return FileResponse(icon, request=request)
