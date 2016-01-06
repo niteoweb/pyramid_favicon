@@ -15,7 +15,6 @@ class FaviconTests(unittest.TestCase):
         self.config.include('pyramid_chameleon')
         self.config.include('pyramid_favicon')
         
-        #self.config.scan()
         app = self.config.make_wsgi_app()
         self.testapp = webtest.TestApp(app)
 
