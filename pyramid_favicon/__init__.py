@@ -1,6 +1,6 @@
 # __init__.py
+from favicon import favicon, home
 
-
-def importme(config):
+def includeme(config):	
     config.add_route('favicon', '/favicon.ico')
-    config.scan()
+    config.add_route('home', '/')

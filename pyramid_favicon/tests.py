@@ -11,9 +11,11 @@ class FaviconTests(unittest.TestCase):
 
     def setUp(self):
         self.config = testing.setUp()
-        self.config.include('pyramid_chameleon')
         
-        # configure(self.config)
+        self.config.include('pyramid_chameleon')
+        self.config.include('pyramid_favicon')
+        
+        #self.config.scan()
         app = self.config.make_wsgi_app()
         self.testapp = webtest.TestApp(app)
 
@@ -21,9 +23,6 @@ class FaviconTests(unittest.TestCase):
         testing.tearDown()
 
     def test_favicon(self):
-        from pyramid_favicon import favicon
-        self.config.add_route('favicon', '/favicon.ico')
-
         response = self.testapp.get('/favicon.ico')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content_type, 'image/x-icon')
