@@ -3,6 +3,7 @@
 
 from pyramid import testing
 
+import os
 import unittest
 import webtest
 
@@ -27,7 +28,10 @@ class FaviconTests(unittest.TestCase):
         self.assertEqual(response.content_type, 'image/x-icon')
 
     def test_favicon_custompath(self):
-        config = testing.setUp(settings={'favicon_path':'mystaticfiles'})
+        here = os.path.dirname(os.path.realpath(__file__))
+        my_path = os.path.join(here, 'mystaticfiles')
+
+        config = testing.setUp(settings={'favicon_path':my_path})
         config.include('pyramid_chameleon')
         config.include('pyramid_favicon')
 
