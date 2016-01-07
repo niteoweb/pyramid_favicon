@@ -27,7 +27,7 @@ class FaviconTests(unittest.TestCase):
         self.assertEqual(response.content_type, 'image/x-icon')
 
     def test_favicon_custompath(self):
-        config = testing.setUp(settings={'favicon_path':'./mystaticfiles'})
+        config = testing.setUp(settings={'favicon_path':'mystaticfiles'})
         config.include('pyramid_chameleon')
         config.include('pyramid_favicon')
 
