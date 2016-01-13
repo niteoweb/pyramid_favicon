@@ -41,7 +41,7 @@ setup(
     ],
 
     install_requires = requires,
-    tests_requires = requires,
+    tests_require = requires,
     
     entry_points = '''
         ''',
