@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 """Serve the favicon.ico at the application root."""
+import os
 
 from pyramid.path import AssetResolver
 from pyramid.response import FileResponse
 from pyramid.security import NO_PERMISSION_REQUIRED
 from pyramid.view import view_config
-
-import os
 
 
 @view_config(
