@@ -15,7 +15,7 @@ setup(
     name = 'pyramid_favicon',
 
     # version
-    version = '0.0.5',
+    version = '0.0.6',
 
     # description
     description = 'Pyramid add-on for defining relocatable favicon.ico',
