@@ -43,6 +43,34 @@ to activate it in your project using one of the following methods:
    config = Configurator(.....)
    config.include('pyramid_favicon')
 
+Specifying the Location of favicon.ico
+======================================
+
+To specify the location of favicon.ico, add a configuration variable named ``favicon_path``
+in your project's ``.ini`` file, like so:
+
+.. code-block:: ini
+   :linenos:
+
+   [app:myapp]
+   favicon_path = app:static/favicon.ico
+
+You can also specify a favicon.ico from another project, like this:
+
+.. code-block:: ini
+   :linenos:
+
+   [app:myapp]
+   favicon_path = anotherapp:static/favicon.ico
+
+And alternately, you can use an absolute path name as well:
+
+.. code-block:: ini
+   :linenos:
+
+   [app:myapp]
+   favicon_path = /home/myproject/another/assets/folder/
+   
 Reporting Bugs / Development Versions
 =====================================
 
