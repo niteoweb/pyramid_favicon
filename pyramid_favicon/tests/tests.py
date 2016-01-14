@@ -43,20 +43,25 @@ class FaviconTests(unittest.TestCase):
         self.assertEqual(response.content_type, 'image/x-icon')
 
     def test_favicon_custompath(self):
-        my_path = 'pyramid_favicon:tests/favicon.ico'
-        settings = {'favicon_path':my_path}
+        test_paths = [
+            'pyramid_favicon:tests/favicon.ico',
+            'pyramid_favicon:tests/mystaticfiles/favicon.ico'
+            ]
 
-        config = testing.setUp(settings=settings)
-        config.include('pyramid_chameleon')
-        config.include('pyramid_favicon')
+        for my_path in test_paths:
+            my_path = 'pyramid_favicon:tests/favicon.ico'
+            settings = {'favicon_path':my_path}
 
-        app = config.make_wsgi_app()
-        testapp = webtest.TestApp(app)
+            config = testing.setUp(settings=settings)
+            config.include('pyramid_chameleon')
+            config.include('pyramid_favicon')
 
-        response = testapp.get('/favicon.ico')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.content_type, 'image/x-icon')
+            app = config.make_wsgi_app()
+            testapp = webtest.TestApp(app)
 
+            response = testapp.get('/favicon.ico')
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.content_type, 'image/x-icon')
 
 
 if __name__=="__main__":
